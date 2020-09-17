@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-composer install --no-dev
+composer install
 npm install
 npm run build
 

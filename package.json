@@ -19,7 +19,6 @@
             "pre-commit": "lint-staged"
         }
     },
-
     "dependencies": {
         "@wordpress/block-editor": "^4.4.0",
         "@wordpress/icons": "^2.5.0",
