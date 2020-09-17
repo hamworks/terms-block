@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Terms Block
  * Plugin URI:      https://github.com/team-hamworks/terms-block
- * Description:     Term list block.
+ * Description:     Term list block. Displays a list of all terms in the selected taxonomy.
  * Author:          HAMWORKS
  * Author URI:      https://ham.works
  * License:         GPLv2 or later
@@ -27,7 +27,7 @@ add_action(
 	'hw_dynamic_block_template_argument',
 	function ( Dynamic_Block $dynamic_block, $attributes ) {
 		$taxonomy = $attributes['taxonomy'];
-		$terms = get_terms( $taxonomy );
+		$terms    = get_terms( $taxonomy );
 		$dynamic_block->set_template_argument( 'terms', $terms );
 	},
 	10,

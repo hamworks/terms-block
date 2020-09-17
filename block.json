@@ -2,6 +2,7 @@
     "name": "terms-block/terms-block",
     "title": "Terms",
     "icon": "tag",
+    "description": "Displays a list of all terms in the selected taxonomy.",
     "textdomain": "terms-block",
     "attributes": {
         "taxonomy": {
@@ -9,7 +10,7 @@
             "default": "category"
         }
     },
-    "category": "common",
+    "category": "widgets",
     "editorScript": "file:./build/index.js"
 
 }

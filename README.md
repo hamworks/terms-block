@@ -9,13 +9,16 @@ Stable tag:        0.0.1
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Rich Text Extension
+Term list block. Displays a list of all terms in the selected taxonomy.
 
 ## Description
 
-Expand Rich Text. 
+Term list block. Displays a list of all terms in the selected taxonomy.
 
-* Inline Background Color.
+You can change the display by placing a template file in your theme.
+
+1. template-parts/blocks/terms-block/terms-block-`block-style`.php
+1. template-parts/blocks/terms-block/terms-block.php
 
 ## Changelog
 
