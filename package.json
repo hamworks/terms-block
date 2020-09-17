@@ -1,10 +1,12 @@
 {
     "name": "@hamworks/terms-block",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Term list block. Displays a list of all terms in the selected taxonomy.",
     "author": "Hiroshi Urabe <urabe@ham.works> (https://ham.works)",
     "license": "GPL-2.0-or-later",
-    "keywords": [ "WordPress" ],
+    "keywords": [
+        "WordPress"
+    ],
     "homepage": "https://github.com/team-hamworks/terms-block",
     "repository": {
         "type": "git",
