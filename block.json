@@ -1,0 +1,15 @@
+{
+    "name": "terms-block/terms-block",
+    "title": "Terms",
+    "icon": "tag",
+    "textdomain": "terms-block",
+    "attributes": {
+        "userId": {
+            "type": "taxonomy",
+            "default": "category"
+        }
+    },
+    "category": "common",
+    "editorScript": "file:./build/index.js"
+
+}
