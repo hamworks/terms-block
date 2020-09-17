@@ -7,8 +7,6 @@ import {
 	__experimentalBlock as Block,
 } from '@wordpress/block-editor';
 
-import { useSelect } from '@wordpress/data';
-
 /**
  * Internal dependencies
  */

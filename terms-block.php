@@ -12,11 +12,13 @@
  * Version: 0.0.1
  */
 
+use HAMWORKS\WP\Dynamic_Block\Dynamic_Block;
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 add_action(
 	'init',
 	function() {
-		new HAMWORKS\WP\Dynamic_Block\Dynamic_Block_Factory( __DIR__ );
+		new Dynamic_Block( __DIR__ );
 	}
 );

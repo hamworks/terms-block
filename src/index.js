@@ -1,18 +1,20 @@
 /**
  * WordPress dependencies
  */
+import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import edit from './edit';
 
+/**
+ * Internal dependencies
+ */
+import edit from './edit';
 import metadata from '../block.json';
 
-const { name, icon } = metadata;
+const { name } = metadata;
 
-export { metadata, name };
-
-export const settings = {
+registerBlockType( name, {
+	...metadata,
 	title: __( 'Terms', 'terms-block' ),
-	icon,
 	edit,
 	save: () => null,
-};
+} );
