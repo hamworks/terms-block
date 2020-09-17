@@ -4,8 +4,8 @@
     "icon": "tag",
     "textdomain": "terms-block",
     "attributes": {
-        "userId": {
-            "type": "taxonomy",
+        "taxonomy": {
+            "type": "string",
             "default": "category"
         }
     },
