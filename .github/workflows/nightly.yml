@@ -1,0 +1,44 @@
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: build
+      run:  bash ./bin/create-release.sh terms-block nigltly
+
+    - name: Github Build & Deploy Action
+      uses: jeoy/github-deploy-actions@v1.0.1
+      env:
+        COMMIT_EMAIL: urabe+ci@ham.works
+        COMMIT_NAME: Github Actions
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BASE_BRANCH: master
+        DEPLOY_BRANCH: nightly
+        FOLDER: distribution
