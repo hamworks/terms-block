@@ -26,3 +26,4 @@ SCRIPT_DIR=$(dirname $0);
 rsync -a --exclude-from=.distignore ./ ./distribution/
 
 rm -rf build
+rm -rf readme.txt
