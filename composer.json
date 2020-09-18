@@ -13,7 +13,7 @@
 
     "require": {
         "php": ">=7.2",
-        "hamworks/wp-dynamic-block": "~0.2"
+        "hamworks/wp-dynamic-block": "^1.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "*",

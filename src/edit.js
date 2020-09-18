@@ -8,7 +8,7 @@ import {
 	InspectorControls,
 } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
-import { PanelBody, SelectControl } from '@wordpress/components';
+import { PanelBody, SelectControl, Disabled } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -55,11 +55,13 @@ export default function Edit( { className, attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 			<Block.div>
-				<ServerSideRender
-					className={ className }
-					block={ name }
-					attributes={ attributes }
-				/>
+				<Disabled>
+					<ServerSideRender
+						className={ className }
+						block={ name }
+						attributes={ attributes }
+					/>
+				</Disabled>
 			</Block.div>
 		</>
 	);

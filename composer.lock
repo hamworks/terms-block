@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32a8326d243390a55073bc25f46fc2f5",
+    "content-hash": "6e60465354f5ffb1acbe2036fbe1015b",
     "packages": [
         {
             "name": "hamworks/wp-dynamic-block",
-            "version": "0.3.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/team-hamworks/wp-dynamic-block.git",
-                "reference": "681e213aba6877b756bfeb1de76fb18cbc36bf4a"
+                "reference": "3b7aee635ae5ece66e6c3e296b1b8153df00f90c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/team-hamworks/wp-dynamic-block/zipball/681e213aba6877b756bfeb1de76fb18cbc36bf4a",
-                "reference": "681e213aba6877b756bfeb1de76fb18cbc36bf4a",
+                "url": "https://api.github.com/repos/team-hamworks/wp-dynamic-block/zipball/3b7aee635ae5ece66e6c3e296b1b8153df00f90c",
+                "reference": "3b7aee635ae5ece66e6c3e296b1b8153df00f90c",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                     "email": "urabe@ham.works"
                 }
             ],
-            "time": "2020-09-17T11:11:44+00:00"
+            "time": "2020-09-18T05:29:29+00:00"
         }
     ],
     "packages-dev": [

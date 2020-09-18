@@ -18,7 +18,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 add_action(
 	'init',
-	function() {
+	function () {
 		new Dynamic_Block( __DIR__ );
 	}
 );
@@ -29,6 +29,19 @@ add_action(
 		$taxonomy = $attributes['taxonomy'];
 		$terms    = get_terms( $taxonomy );
 		$dynamic_block->set_template_argument( 'terms', $terms );
+	},
+	10,
+	2
+);
+
+add_filter(
+	'hw_dynamic_block_terms-block/terms-block_template_arguments',
+	function ( $arguments, $attributes ) {
+		$taxonomy           = $attributes['taxonomy'];
+		$terms              = get_terms( $taxonomy );
+		$arguments['terms'] = $terms;
+
+		return $arguments;
 	},
 	10,
 	2
