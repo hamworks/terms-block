@@ -5,6 +5,10 @@
     "description": "Displays a list of all terms in the selected taxonomy.",
     "textdomain": "terms-block",
     "attributes": {
+        "className": {
+            "type": "string",
+            "default": ""
+        },
         "taxonomy": {
             "type": "string",
             "default": "category"
