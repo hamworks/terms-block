@@ -22,6 +22,9 @@ You can change the display by placing a template file in your theme.
 
 ## Changelog
 
-### 0.0.1
+### 0.0.5
 * first release.
+
+### 0.0.1
+* internal release.
 
