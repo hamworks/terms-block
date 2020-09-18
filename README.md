@@ -1,13 +1,13 @@
 # Terms Block
-Contributors:      Toro_Unit,hamworks
-Donate link:       https://www.paypal.me/torounit
-Tags:              Gutenberg, term, block
-Requires at least: 5.5
-Tested up to:      5.5
-Requires PHP:      7.3
-Stable tag:        0.1.0
-License:           GPLv2 or later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Contributors:      Toro_Unit,hamworks  
+Donate link:       https://www.paypal.me/torounit  
+Tags:              Gutenberg, term, block  
+Requires at least: 5.5  
+Tested up to:      5.5  
+Requires PHP:      7.3  
+Stable tag:        0.1.0  
+License:           GPLv2 or later  
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html  
 
 Term list block. Displays a list of all terms in the selected taxonomy.
 
