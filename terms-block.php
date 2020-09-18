@@ -35,7 +35,7 @@ add_action(
 );
 
 add_filter(
-	'hw_dynamic_block_terms-block/terms-block_template_arguments',
+	'hw_dynamic_block_template_arguments_to_terms-block/terms-block',
 	function ( $arguments, $attributes ) {
 		$taxonomy           = $attributes['taxonomy'];
 		$terms              = get_terms( $taxonomy );

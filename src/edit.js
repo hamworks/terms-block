@@ -3,17 +3,23 @@
  */
 
 import { ServerSideRender } from '@wordpress/editor';
+import { __ } from '@wordpress/i18n';
 import {
 	__experimentalBlock as Block,
 	InspectorControls,
 } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
-import { PanelBody, SelectControl, Disabled } from '@wordpress/components';
+import {
+	PanelBody,
+	SelectControl,
+	Disabled,
+	Placeholder,
+} from '@wordpress/components';
 
 /**
  * Internal dependencies
  */
-import { name } from '../block.json';
+import { name, icon } from '../block.json';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -33,27 +39,49 @@ export default function Edit( { className, attributes, setAttributes } ) {
 		( select ) => select( 'core' ).getTaxonomies() || [],
 		[]
 	);
+
+	const terms = useSelect(
+		( select ) =>
+			select( 'core' ).getEntityRecords( 'taxonomy', taxonomy, {} ) || [],
+		[ taxonomy ]
+	);
+
+	const inspectorControls = (
+		<InspectorControls>
+			<PanelBody title={ 'Settings' }>
+				<SelectControl
+					label={ 'Taxonomy' }
+					onChange={ ( newTaxonomy ) => {
+						setAttributes( { taxonomy: newTaxonomy } );
+					} }
+					value={ taxonomy }
+					options={ [
+						...taxonomies.map(
+							( { name: label, slug: value } ) => ( {
+								value,
+								label,
+							} )
+						),
+					] }
+				/>
+			</PanelBody>
+		</InspectorControls>
+	);
+	const hasTerms = Array.isArray( terms ) && terms.length;
+	if ( ! hasTerms ) {
+		return (
+			<>
+				{ inspectorControls }
+				<Placeholder icon={ icon } label={ __( 'Terms' ) }>
+					{ __( 'No terms found.' ) }
+				</Placeholder>
+			</>
+		);
+	}
+
 	return (
 		<>
-			<InspectorControls>
-				<PanelBody title={ 'Settings' }>
-					<SelectControl
-						label={ 'Taxonomy' }
-						onChange={ ( newTaxonomy ) => {
-							setAttributes( { taxonomy: newTaxonomy } );
-						} }
-						value={ taxonomy }
-						options={ [
-							...taxonomies.map(
-								( { name: label, slug: value } ) => ( {
-									value,
-									label,
-								} )
-							),
-						] }
-					/>
-				</PanelBody>
-			</InspectorControls>
+			{ inspectorControls }
 			<Block.div>
 				<Disabled>
 					<ServerSideRender

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "hamworks/wp-dynamic-block",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/team-hamworks/wp-dynamic-block.git",
-                "reference": "3b7aee635ae5ece66e6c3e296b1b8153df00f90c"
+                "reference": "004197e9afde95215dc297fa854fe19fb4f769d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/team-hamworks/wp-dynamic-block/zipball/3b7aee635ae5ece66e6c3e296b1b8153df00f90c",
-                "reference": "3b7aee635ae5ece66e6c3e296b1b8153df00f90c",
+                "url": "https://api.github.com/repos/team-hamworks/wp-dynamic-block/zipball/004197e9afde95215dc297fa854fe19fb4f769d6",
+                "reference": "004197e9afde95215dc297fa854fe19fb4f769d6",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                     "email": "urabe@ham.works"
                 }
             ],
-            "time": "2020-09-18T05:29:29+00:00"
+            "time": "2020-09-18T05:48:32+00:00"
         }
     ],
     "packages-dev": [
