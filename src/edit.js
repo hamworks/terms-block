@@ -36,7 +36,7 @@ import { name, icon } from '../block.json';
 export default function Edit( { className, attributes, setAttributes } ) {
 	const { taxonomy } = attributes;
 	const taxonomies = useSelect(
-		( select ) => select( 'core' ).getTaxonomies() || [],
+		( select ) => select( 'core' ).getTaxonomies( { per_page: -1 } ) || [],
 		[]
 	);
 
