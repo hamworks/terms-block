@@ -1,6 +1,6 @@
 {
     "name": "@hamworks/terms-block",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Term list block. Displays a list of all terms in the selected taxonomy.",
     "author": "Hiroshi Urabe <urabe@ham.works> (https://ham.works)",
     "license": "GPL-2.0-or-later",
