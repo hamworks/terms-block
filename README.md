@@ -1,5 +1,5 @@
 # Terms Block
-Contributors:      Toro_Unit,hamworks  
+Contributors:      Toro_Unit,hamworks,mel_cha  
 Donate link:       https://www.paypal.me/torounit  
 Tags:              Gutenberg, term, block  
 Requires at least: 5.5  
@@ -20,7 +20,21 @@ You can change the display by placing a template file in your theme.
 1. template-parts/blocks/terms-block/terms-block-`block-style`.php
 1. template-parts/blocks/terms-block/terms-block.php
 
+Filter for `get_terms`.
+
+```php
+add_filter( 'terms_block_get_terms_arguments', 'my_filter' );
+function my_filter( $args, $taxonomy, $attributes ) {
+	$args = array_merge( $args, array( 'orderby' => 'order' ) );
+
+	return $args;
+}
+```
+
 ## Changelog
+
+### 0.2.0
+* Add `terms_block_get_terms_arguments` filter.
 
 ### 0.0.5
 * first release.

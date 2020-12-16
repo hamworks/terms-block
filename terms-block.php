@@ -26,8 +26,18 @@ add_action(
 add_filter(
 	'hw_dynamic_block_template_arguments_to_terms-block/terms-block',
 	function ( $arguments, $attributes ) {
-		$taxonomy           = $attributes['taxonomy'];
-		$terms              = get_terms( $taxonomy );
+		$taxonomy = $attributes['taxonomy'];
+
+		/**
+		 * Filters get_terms arguments.
+		 *
+		 * @param array $args Second arguments for get_terms.
+		 * @param string $taxonomy Taxonomy name.
+		 * @param array $attributes Block attributes.
+		 */
+		$args  = apply_filters( 'terms_block_get_terms_arguments', array(), $taxonomy, $attributes );
+		$terms = get_terms( $taxonomy, $args );
+
 		$arguments['terms'] = $terms;
 
 		return $arguments;
