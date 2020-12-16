@@ -3,7 +3,7 @@ Contributors:      Toro_Unit,hamworks,mel_cha
 Donate link:       https://www.paypal.me/torounit  
 Tags:              Gutenberg, term, block  
 Requires at least: 5.5  
-Tested up to:      5.5  
+Tested up to:      5.6  
 Requires PHP:      7.3  
 Stable tag:        0.1.2
 License:           GPLv2 or later  
@@ -23,7 +23,7 @@ You can change the display by placing a template file in your theme.
 Filter for `get_terms`.
 
 ```php
-add_filter( 'terms_block_get_terms_arguments', 'my_filter' );
+add_filter( 'terms_block_get_terms_arguments', 'my_filter', 10, 3 );
 function my_filter( $args, $taxonomy, $attributes ) {
 	$args = array_merge( $args, array( 'orderby' => 'order' ) );
 
@@ -35,10 +35,11 @@ function my_filter( $args, $taxonomy, $attributes ) {
 
 ### 0.2.0
 * Add `terms_block_get_terms_arguments` filter.
+* Tested on WordPress 5.6.
 
 ### 0.0.5
-* first release.
+* First release.
 
 ### 0.0.1
-* internal release.
+* Internal release.
 
