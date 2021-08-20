@@ -2,10 +2,10 @@
  * WordPress dependencies
  */
 
-import { ServerSideRender } from '@wordpress/editor';
+import ServerSideRender from '@wordpress/server-side-render';
 import { __ } from '@wordpress/i18n';
 import {
-	__experimentalBlock as Block,
+	useBlockProps,
 	InspectorControls,
 } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
@@ -33,6 +33,7 @@ import { name, icon } from '../block.json';
  * @return {WPElement} Element to render.
  */
 export default function Edit( { className, attributes, setAttributes } ) {
+	const blockProps = useBlockProps();
 	const { taxonomy } = attributes;
 	const taxonomies = useSelect(
 		( select ) => select( 'core' ).getTaxonomies( { per_page: -1 } ) || [],
@@ -81,7 +82,7 @@ export default function Edit( { className, attributes, setAttributes } ) {
 	return (
 		<>
 			{ inspectorControls }
-			<Block.div>
+			<div { ...blockProps }>
 				<Disabled>
 					<ServerSideRender
 						className={ className }
@@ -89,7 +90,7 @@ export default function Edit( { className, attributes, setAttributes } ) {
 						attributes={ attributes }
 					/>
 				</Disabled>
-			</Block.div>
+			</div>
 		</>
 	);
 }

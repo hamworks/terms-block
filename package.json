@@ -22,14 +22,15 @@
         }
     },
     "dependencies": {
-        "@wordpress/block-editor": "^5.1.5",
+        "@wordpress/block-editor": "^6.1.13",
+        "@wordpress/icons": "^4.0.2",
+        "@wordpress/rich-text": "^4.1.5",
+        "@wordpress/server-side-render": "^2.1.11",
+        "lodash": "^4.17.21",
         "@wordpress/blocks": "^9.1.7",
         "@wordpress/components": "^14.1.10",
         "@wordpress/data": "^5.1.5",
         "@wordpress/i18n": "^4.1.1",
-        "@wordpress/icons": "^2.8.0",
-        "@wordpress/rich-text": "^3.23.0",
-        "lodash": "^4.17.20",
         "tinycolor2": "^1.4.2"
     },
     "devDependencies": {
