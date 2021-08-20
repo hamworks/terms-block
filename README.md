@@ -33,6 +33,9 @@ function my_filter( $args, $taxonomy, $attributes ) {
 
 ## Changelog
 
+### 1.0.0
+* Tested on WordPress 5.8.
+
 ### 0.2.0
 * Add `terms_block_get_terms_arguments` filter.
 * Tested on WordPress 5.6.
