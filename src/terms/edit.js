@@ -4,7 +4,7 @@
 
 import { ServerSideRender } from '@wordpress/editor';
 import { __ } from '@wordpress/i18n';
-import { InspectorControls } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
 import {
 	PanelBody,
@@ -19,6 +19,7 @@ import {
 import { name, icon } from './block.json';
 
 export default function Edit( { className, attributes, setAttributes } ) {
+	const blockProps = useBlockProps();
 	const { taxonomy } = attributes;
 	const taxonomies = useSelect(
 		( select ) => select( 'core' ).getTaxonomies( { per_page: -1 } ) || [],
@@ -67,7 +68,7 @@ export default function Edit( { className, attributes, setAttributes } ) {
 	return (
 		<>
 			{ inspectorControls }
-			<div>
+			<div { ...blockProps }>
 				<Disabled>
 					<ServerSideRender
 						className={ className }
