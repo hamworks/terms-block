@@ -2,8 +2,8 @@
 Contributors:      Toro_Unit,hamworks,mel_cha  
 Donate link:       https://www.paypal.me/torounit  
 Tags:              Gutenberg, term, block  
-Requires at least: 5.6  
-Tested up to:      5.8  
+Requires at least: 6.0  
+Tested up to:      6.0  
 Requires PHP:      7.3  
 Stable tag:        1.0.0
 License:           GPLv2 or later  
@@ -32,9 +32,6 @@ function my_filter( $args, $taxonomy, $attributes ) {
 ```
 
 ## Changelog
-
-### 1.0.0
-* Tested on WordPress 5.8.
 
 ### 0.2.0
 * Add `terms_block_get_terms_arguments` filter.

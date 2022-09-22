@@ -1,0 +1,19 @@
+{
+	"name": "terms-block/assigned-terms",
+	"title": "Assigned Terms",
+	"icon": "tag",
+	"description": "Displays a list of assigned terms in the selected taxonomy.",
+	"textdomain": "terms-block",
+	"attributes": {
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"taxonomy": {
+			"type": "string",
+			"default": "category"
+		}
+	},
+	"category": "widgets",
+	"editorScript": "file:./index.js"
+}
