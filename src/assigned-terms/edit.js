@@ -19,19 +19,8 @@ import {
 /**
  * Internal dependencies
  */
-import { name, icon } from '../block.json';
+import { name, icon } from './block.json';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
- * @param {Object}   [props]               Properties passed from the editor.
- * @param {Object}   [props.attributes]    Attributes.
- * @param {Function} [props.setAttributes] Attribute setter.
- * @param {string}   [props.className]     Class name generated for the block.
- * @return {WPElement} Element to render.
- */
 export default function Edit( { className, attributes, setAttributes } ) {
 	const blockProps = useBlockProps();
 	const { taxonomy } = attributes;
@@ -88,6 +77,10 @@ export default function Edit( { className, attributes, setAttributes } ) {
 						className={ className }
 						block={ name }
 						attributes={ attributes }
+						emptyResponseLabel={ __(
+							'Term Not Found.',
+							'terms-block'
+						) }
 					/>
 				</Disabled>
 			</div>

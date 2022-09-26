@@ -1,29 +1,33 @@
 {
-    "name": "hamworks/terms-block",
-    "description": "",
-    "license": "GPL-2.0-or-later",
-    "type": "project",
-    "minimum-stability": "stable",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        }
-    ],
-
-    "require": {
-        "php": ">=7.2",
-        "hamworks/wp-dynamic-block": "^1.0"
-    },
-    "require-dev": {
-        "squizlabs/php_codesniffer": "*",
-        "dealerdirect/phpcodesniffer-composer-installer": "*",
-        "phpcompatibility/phpcompatibility-wp": "*",
-        "wp-coding-standards/wpcs": "*"
-    },
-    "scripts" : {
-        "format": "phpcbf --standard=./.phpcs.xml.dist --report-summary --report-source",
-        "lint": "phpcs --standard=./.phpcs.xml.dist",
-        "phpcs": "phpcs --standard=./.phpcs.xml.dist"
-    }
+	"name": "hamworks/terms-block",
+	"description": "",
+	"license": "GPL-2.0-or-later",
+	"type": "project",
+	"minimum-stability": "stable",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"php": ">=7.2",
+		"hamworks/wp-dynamic-block": "^1.0"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "*",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"phpcompatibility/phpcompatibility-wp": "*",
+		"wp-coding-standards/wpcs": "*"
+	},
+	"scripts": {
+		"format": "phpcbf --standard=./.phpcs.xml.dist --report-summary --report-source",
+		"lint": "phpcs --standard=./.phpcs.xml.dist",
+		"phpcs": "phpcs --standard=./.phpcs.xml.dist"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
 }

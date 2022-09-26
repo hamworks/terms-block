@@ -1,0 +1,19 @@
+{
+	"name": "terms-block/terms",
+	"title": "Terms",
+	"icon": "tag",
+	"description": "Displays a list of all terms in the selected taxonomy.",
+	"textdomain": "terms-block",
+	"attributes": {
+		"className": {
+			"type": "string",
+			"default": ""
+		},
+		"taxonomy": {
+			"type": "string",
+			"default": "category"
+		}
+	},
+	"category": "widgets",
+	"editorScript": "file:./index.js"
+}
