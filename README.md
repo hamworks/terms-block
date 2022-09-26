@@ -17,8 +17,8 @@ Term list block. Displays a list of all terms in the selected taxonomy.
 
 You can change the display by placing a template file in your theme.
 
-1. template-parts/blocks/terms-block/terms-block-`block-style`.php
-1. template-parts/blocks/terms-block/terms-block.php
+1. template-parts/blocks/terms-block/`block-name`-`block-style`.php
+1. template-parts/blocks/terms-block/`block-name`.php
 
 Filter for `get_terms`.
 

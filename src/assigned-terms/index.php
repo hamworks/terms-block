@@ -19,9 +19,11 @@ add_filter(
 add_filter(
 	'hw_dynamic_block_template_arguments_to_terms-block/assigned-terms',
 	function ( $arguments, $attributes ) {
-		$taxonomy           = $attributes['taxonomy'];
-		$terms              = get_the_terms( get_post(), $taxonomy );
-		$arguments['terms'] = $terms;
+		$taxonomy = $attributes['taxonomy'];
+		$terms    = get_the_terms( get_post(), $taxonomy );
+
+		$arguments['taxonomy'] = $attributes['taxonomy'];
+		$arguments['terms']    = $terms;
 
 		return $arguments;
 	},

@@ -31,7 +31,8 @@ add_filter(
 		$args  = apply_filters( 'terms_block_get_terms_arguments', array(), $taxonomy, $attributes );
 		$terms = get_terms( $taxonomy, $args );
 
-		$arguments['terms'] = $terms;
+		$arguments['taxonomy'] = $attributes['taxonomy'];
+		$arguments['terms']    = $terms;
 
 		return $arguments;
 	},
