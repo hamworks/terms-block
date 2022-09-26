@@ -33,6 +33,10 @@ function my_filter( $args, $taxonomy, $attributes ) {
 
 ## Changelog
 
+### 2.0.0
+* add assigned terms block
+* rename terms-block to terms
+
 ### 1.0.0
 * Tested on WordPress 5.8.
 
