@@ -9,7 +9,7 @@
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     terms-block
  * Domain Path:     /languages
- * Version: 1.0.0
+ * Version: 2.0.0
  */
 
 use HAMWORKS\WP\Dynamic_Block\Dynamic_Block;

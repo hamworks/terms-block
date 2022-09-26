@@ -1,6 +1,6 @@
 {
 	"name": "@hamworks/terms-block",
-	"version": "0.2.0",
+	"version": "2.0.0",
 	"description": "Term list block. Displays a list of all terms in the selected taxonomy.",
 	"author": "Hiroshi Urabe <urabe@ham.works> (https://ham.works)",
 	"license": "GPL-2.0-or-later",
@@ -27,11 +27,11 @@
 		"@wordpress/icons": "^9.9.0",
 		"@wordpress/rich-text": "^5.16.0",
 		"lodash": "^4.17.21",
-        "@wordpress/blocks": "^9.1.7",
-        "@wordpress/components": "^14.1.10",
-        "@wordpress/data": "^5.1.5",
-        "@wordpress/i18n": "^4.1.1"
-    },
+		"@wordpress/blocks": "^9.1.7",
+		"@wordpress/components": "^14.1.10",
+		"@wordpress/data": "^5.1.5",
+		"@wordpress/i18n": "^4.1.1"
+	},
 	"devDependencies": {
 		"@wordpress/browserslist-config": "5.1.0",
 		"@wordpress/scripts": "^24.2.0",
