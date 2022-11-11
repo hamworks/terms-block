@@ -33,7 +33,10 @@ function my_filter( $args, $taxonomy, $attributes ) {
 
 ## Changelog
 
-### 2.0.1
+### 2.0.3
+* use get_block_wrapper_attributes
+
+### 2.0.2
 * use @wordpress/server-side-render
 
 ### 2.0.0
