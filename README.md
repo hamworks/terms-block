@@ -33,6 +33,9 @@ function my_filter( $args, $taxonomy, $attributes ) {
 
 ## Changelog
 
+### 2.0.1
+* use @wordpress/server-side-render
+
 ### 2.0.0
 * add assigned terms block
 * rename terms-block to terms
