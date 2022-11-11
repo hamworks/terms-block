@@ -6,6 +6,7 @@ import ServerSideRender from '@wordpress/server-side-render';
 import { __ } from '@wordpress/i18n';
 import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
+import { getBlockDefaultClassName } from '@wordpress/blocks';
 import {
 	PanelBody,
 	SelectControl,
@@ -17,9 +18,9 @@ import {
  * Internal dependencies
  */
 import { name, icon } from './block.json';
+import { omitClassNamesFromBlockProps } from '../util/omitClassNamesFromBlockProps';
 
 export default function Edit( { className, attributes, setAttributes } ) {
-	const blockProps = useBlockProps();
 	const { taxonomy } = attributes;
 	const taxonomies = useSelect(
 		( select ) => select( 'core' ).getTaxonomies( { per_page: -1 } ) || [],
@@ -53,6 +54,13 @@ export default function Edit( { className, attributes, setAttributes } ) {
 			</PanelBody>
 		</InspectorControls>
 	);
+
+	const blockDefaultClassName = getBlockDefaultClassName( name );
+	const blockProps = omitClassNamesFromBlockProps( useBlockProps(), [
+		blockDefaultClassName,
+		className,
+	] );
+
 	const hasTerms = Array.isArray( terms ) && terms.length;
 	if ( ! hasTerms ) {
 		return (

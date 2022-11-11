@@ -7,9 +7,11 @@
  * }
  */
 ?>
-<ul>
-	<?php foreach ( $args['terms'] as $term ) : //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
-		<?php /** @var WP_Term $term */ ?>
-		<li><a href="<?php echo esc_js( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a></li>
-	<?php endforeach; ?>
-</ul>
+<div <?php echo get_block_wrapper_attributes(); // phpcs:ignore ?>>
+	<ul>
+		<?php foreach ( $args['terms'] as $wp_term ) : ?>
+			<?php /** @var WP_Term $wp_term WP_Term object. */ ?>
+			<li><a href="<?php echo esc_js( get_term_link( $wp_term ) ); ?>"><?php echo esc_html( $wp_term->name ); ?></a></li>
+		<?php endforeach; ?>
+	</ul>
+</div>
