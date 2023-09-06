@@ -3,8 +3,8 @@ Contributors:      Toro_Unit,hamworks,mel_cha
 Donate link:       https://www.paypal.me/torounit  
 Tags:              Gutenberg, term, block  
 Requires at least: 6.0  
-Tested up to:      6.0  
-Requires PHP:      7.3  
+Tested up to:      6.3 
+Requires PHP:      7.4  
 Stable tag:        2.0.3
 License:           GPLv2 or later  
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html  
@@ -32,6 +32,9 @@ function my_filter( $args, $taxonomy, $attributes ) {
 ```
 
 ## Changelog
+
+### 2.1.0
+* support wp 6.3
 
 ### 2.0.3
 * use get_block_wrapper_attributes
