@@ -1,4 +1,5 @@
 {
+	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"name": "terms-block/terms-block",
 	"title": "Terms (Deprecated)",
 	"apiVersion": 3,
@@ -14,6 +15,9 @@
 			"type": "string",
 			"default": "category"
 		}
+	},
+	"supports": {
+		"inserter": false
 	},
 	"editorScript": "file:./index.js"
 }

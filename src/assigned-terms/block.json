@@ -1,4 +1,5 @@
 {
+	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"name": "terms-block/assigned-terms",
 	"title": "Assigned Terms",
 	"apiVersion": 3,
