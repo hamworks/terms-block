@@ -1,6 +1,7 @@
 {
 	"name": "terms-block/terms-block",
 	"title": "Terms (Deprecated)",
+	"apiVersion": 3,
 	"icon": "tag",
 	"description": "Displays a list of all terms in the selected taxonomy. (Deprecated)",
 	"textdomain": "terms-block",
