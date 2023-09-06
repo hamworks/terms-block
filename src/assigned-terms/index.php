@@ -11,7 +11,7 @@ add_action(
 
 add_filter(
 	'hw_dynamic_block_fallback_template_path_to_terms-block/assigned-terms',
-	function ( $template_part_dir ) {
+	function () {
 		return __DIR__ . '/../../src/terms-block/template.php';
 	}
 );

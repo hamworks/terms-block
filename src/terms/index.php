@@ -11,7 +11,7 @@ add_action(
 
 add_filter(
 	'hw_dynamic_block_fallback_template_path_to_terms-block/terms',
-	function ( $template_part_dir ) {
+	function () {
 		return __DIR__ . '/../../src/terms-block/template.php';
 	}
 );
@@ -28,8 +28,8 @@ add_filter(
 		 * @param string $taxonomy Taxonomy name.
 		 * @param array $attributes Block attributes.
 		 */
-		$args  = apply_filters( 'terms_block_get_terms_arguments', array(), $taxonomy, $attributes );
-		$terms = get_terms( $taxonomy, $args );
+		$args  = apply_filters( 'terms_block_get_terms_arguments', array( 'taxonomy' => $taxonomy ), $taxonomy, $attributes );
+		$terms = get_terms( $args );
 
 		$arguments['taxonomy'] = $attributes['taxonomy'];
 		$arguments['terms']    = $terms;

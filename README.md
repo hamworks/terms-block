@@ -34,7 +34,8 @@ function my_filter( $args, $taxonomy, $attributes ) {
 ## Changelog
 
 ### 2.1.0
-* support wp 6.3
+* support WordPress 6.3.
+* fix for deprecated parameters in get_terms.
 
 ### 2.0.3
 * use get_block_wrapper_attributes
